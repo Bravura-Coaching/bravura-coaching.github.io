@@ -6,12 +6,62 @@
   width: 100%;
   box-sizing: border-box;
   font-family: 'LibreBodoni', sans-serif;
+  position: relative;
+
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+  }
 }
 
 .navbar-brand {
   font-size: clamp(1.25rem, 3vw, 1.5rem);
   color: #C25268;
   font-weight: 700;
+  flex-shrink: 0;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+
+  span {
+    width: 1.5rem;
+    height: 0.25rem;
+    background-color: #C25268;
+    transition: all 0.3s ease;
+    position: absolute;
+    left: 0;
+  }
+
+  span:nth-child(1) {
+    top: 0.25rem;
+  }
+
+  span:nth-child(2) {
+    top: 0.875rem;
+  }
+
+  &[aria-expanded='true'] {
+    span:nth-child(1) {
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    span:nth-child(2) {
+      top: 50%;
+      transform: translateY(-50%) rotate(-45deg);
+    }
+  }
 }
 
 .navbar-links {
@@ -21,6 +71,30 @@
   margin: 0;
   padding: 0;
 
+  @media (max-width: 768px) {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 0;
+    gap: 0;
+    max-height: 0;
+    min-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+
+    &.active {
+      max-height: 500px;
+      padding: 1rem;
+
+      li {
+        padding: 0.75rem 0;
+      }
+    }
+  }
+
   li a {
     color: #C25268;
     text-decoration: none;
@@ -29,6 +103,11 @@
 
     &:hover {
       opacity: 0.7;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+      display: block;
     }
   }
 }
