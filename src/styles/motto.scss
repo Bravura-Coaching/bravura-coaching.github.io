@@ -1,0 +1,16 @@
+.motto {
+    font-family: 'FacultyGlyphic', sans-serif;
+    font-size: clamp(1rem, 3vw, 2rem);
+    background-color: #F5F5F5;
+    color: #202020;
+    text-align: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    @media (max-width: 768px) {
+      font-size: clamp(1.25rem, 2vw, 1.5rem);
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+}
