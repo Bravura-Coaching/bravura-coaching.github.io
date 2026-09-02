@@ -1,0 +1,51 @@
+---
+import '../styles/fees.scss';
+
+const tiers = [
+  {
+    id: 'introductory',
+    level: 'Introductory',
+    description: 'A one off introductory session to get you started',
+    details: 'Perfect for those new to coaching. This session will help you understand the coaching process and establish your initial goals.',
+    price: '£100'
+  },
+  {
+    id: 'intermediate',
+    level: 'Intermediate',
+    description: 'An intermediate session, perfect for after Introductory',
+    details: 'Build on your foundation with our intermediate coaching package. Ideal for developing skills and deepening your understanding.',
+    price: '£150'
+  },
+  {
+    id: 'advanced',
+    level: 'Advanced',
+    description: 'An advanced session, for experts',
+    details: 'Take your coaching to the next level with our advanced program. Designed for experienced individuals looking for specialized guidance.',
+    price: '£200'
+  }
+];
+---
+
+<section class="fees" id="fees">
+  <div class="fees-header">
+    <h2 class="fees-title">Fees</h2>
+  </div>
+  <div class="fees-container">
+    {tiers.map((tier) => (
+      <div class="fee-card">
+        <div class="fee-content">
+          <h3 class="fee-level">{tier.level}</h3>
+          <p class="fee-description">{tier.description}</p>
+          <details class="fee-details">
+            <summary>See more</summary>
+            <p class="fee-details-text">{tier.details}</p>
+          </details>
+        </div>
+        <div class="fee-footer">
+          <span class="book-now">Book Now</span>
+          <span class="fee-price">{tier.price}</span>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
