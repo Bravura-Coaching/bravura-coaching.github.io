@@ -120,31 +120,15 @@
 
 @media (max-width: 768px) {
   .fees {
-    padding: 2rem 1rem;
+    padding: 2rem 0;
   }
 
   .fees-header {
-    margin-bottom: 2rem;
+    margin: 0 1rem 2rem 1rem;
   }
 
   .fees-container {
+    margin: 0 1rem;
     grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .fee-content {
-    padding: 1.5rem;
-  }
-
-  .fee-footer {
-    padding: 1rem 1.5rem;
-  }
-
-  .fee-level {
-    font-size: 1.25rem;
-  }
-
-  .fee-description {
-    font-size: 0.9rem;
   }
 }
