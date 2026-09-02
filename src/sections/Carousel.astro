@@ -1,0 +1,39 @@
+---
+import { Image } from 'astro:assets';
+import '../styles/carousel.scss';
+
+// Import all images from the carousel folder
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/images/carousel/*.{jpeg,jpg,png,gif,webp}',
+  { eager: true }
+);
+
+// Convert glob results to array of image metadata
+const carouselImages = Object.values(images).map(module => module.default);
+---
+
+<section class="carousel-section">
+  <div class="carousel-container">
+    <div class="carousel-track">
+      {carouselImages.map((image, index) => (
+        <div class="carousel-item" key={index}>
+          <Image 
+            src={image} 
+            alt={`Carousel image ${index + 1}`}
+            class="carousel-image"
+          />
+        </div>
+      ))}
+      {/* Duplicate images for seamless loop */}
+      {carouselImages.map((image, index) => (
+        <div class="carousel-item" key={`duplicate-${index}`}>
+          <Image 
+            src={image} 
+            alt={`Carousel image ${index + 1}`}
+            class="carousel-image"
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
