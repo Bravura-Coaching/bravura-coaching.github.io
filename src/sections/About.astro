@@ -1,0 +1,19 @@
+---
+import { Image } from 'astro:assets';
+import aboutImage from '../assets/images/about.png';
+import '../styles/about.scss';
+---
+
+<section class="about">
+  <div class="about-container">
+    <div class="about-content">
+      <h2 class="about-title">About</h2>
+      <p class="about-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec luctus erat. Vestibulum vehicula in leo nec feugiat. Vestibulum aliquet nisl et mi egestas, non mollis purus molestie. Vestibulum eget mauris fringilla, posuere diam nec, viverra nibh. Nam ac diam sagittis, feugiat lectus ac, sodales urna. Cras vehicula luctus urna, a tristique purus molestie ac. Fusce vulputate sapien lobortis faucibus maximus. Nulla facilisi. Vivamus non aliquam lectus. Suspendisse pellentesque dolor vel nibh porta rhoncus.
+      </p>
+    </div>
+    <div class="about-image">
+      <Image src={aboutImage} alt="About Bravura Coaching" />
+    </div>
+  </div>
+</section>
