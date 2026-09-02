@@ -9,10 +9,10 @@ import '../styles/navbar.scss';
         <span></span>
     </button>
     <ul class="navbar-links">
-        <li><a href="/">HOME</a></li>
-        <li><a href="/about">ABOUT</a></li>
-        <li><a href="/fees">FEES</a></li>
-        <li><a href="/contact">CONTACT</a></li>
+        <li><a href="#hero">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#fees">FEES</a></li>
+        <li><a href="#contact">CONTACT</a></li>
     </ul>
 </nav>
 
@@ -34,10 +34,18 @@ import '../styles/navbar.scss';
             hamburger.setAttribute('aria-expanded', !isExpanded);
         });
         
-        // Close menu when a link is clicked
+        // Close menu when a link is clicked and smooth scroll
         document.querySelectorAll('.navbar-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                closeMenu();
+            link.addEventListener('click', (e) => {
+                const href = link.getAttribute('href');
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    closeMenu();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
             });
         });
         

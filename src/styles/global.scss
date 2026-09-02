@@ -3,6 +3,10 @@
     margin: 0px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: 'LibreBodoni';
   src: url('/fonts/LibreBodoni-VariableFont_wght.woff2') format('woff2-variations'),

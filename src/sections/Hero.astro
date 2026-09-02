@@ -9,7 +9,7 @@ import '../styles/hero.scss';
 // Javascript code
 const bg = await getImage({ src: heroBg, format: 'webp' });
 ---
-<section class="hero" style={`--bg-url: url(${bg.src})`}>
+<section class="hero" id="hero" style={`--bg-url: url(${bg.src})`}>
     <Navbar />
     <h1>BRAVURA</h1>
     <h2>Nourish your brain<br/>Play music</h2>
