@@ -1,0 +1,44 @@
+---
+import '../styles/footer.scss';
+---
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h2 class="footer-logo">BRAVURA</h2>
+      <p class="footer-tagline">Nourish your brain</p>
+      <p class="footer-tagline">Play music</p>
+    </div>
+    <nav class="footer-nav">
+      <ul class="footer-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#fees">Fees</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  function initFooterLinks() {
+    document.querySelectorAll('.footer-links a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        if (href.startsWith('#')) {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFooterLinks);
+  } else {
+    initFooterLinks();
+  }
+</script>
