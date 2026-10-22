@@ -1,0 +1,37 @@
+---
+import '../styles/testimonials.scss';
+
+const testimonials = [
+  {
+    id: '1',
+    person: 'Person 1',
+    description: 'Put the testimonial here, this is a placeholder for the actual testimonal text on the website.'
+  },
+  {
+    id: '2',
+    person: 'Person 2',
+    description: 'Put the testimonial here, this is a placeholder for the actual testimonal text on the website.'
+  },
+  {
+    id: '3',
+    person: 'Person 3',
+    description: 'Put the testimonial here, this is a placeholder for the actual testimonal text on the website.'
+  }
+];
+---
+
+<section class="testimonials" id="testimonials">
+  <div class="testimonials-header">
+    <h2 class="testimonials-title">Testimonials</h2>
+  </div>
+  <div class="testimonials-container">
+    {testimonials.map((testimonial) => (
+      <div class="testimonials-card">
+        <div class="testimonials-content">
+          <h3 class="testimonials-description">{testimonial.person}</h3>
+          <p class="testimonials-description">{testimonial.description}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

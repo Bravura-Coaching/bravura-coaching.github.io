@@ -8,7 +8,9 @@
   overflow-x: hidden;
   
   background-image: var(--bg-url);
-  
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: darken; 
+
   /* Forces the image to stretch and completely cover the container */
   background-size: cover;
   background-attachment: fixed;
