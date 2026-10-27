@@ -7,21 +7,24 @@ const tiers = [
     level: 'Introductory',
     description: 'Discovery Call & 30min Instrumental Session',
     details: 'Includes a 20min Discovery Call ⁠and a 30min Online Instrumental Session to get you started',
-    price: '£35'
+    price: '£35',
+    link: 'https://calendly.com/emma-sjacob/introductory-session'
   },
   {
     id: 'intermediate',
     level: 'Beginner/Intermediate',
     description: 'Intermediate sessions, perfect for after Introductory',
     details: 'Includes 4 x 60min Online Sessions and ⁠1 x 60min Face to Face Session',
-    price: '£350'
+    price: '£350',
+    link: 'https://calendly.com/emma-sjacob/1-hour-lesson-one-to-one-in-person'
   },
   {
     id: 'bespoke',
     level: 'Bespoke',
     description: 'Bespoke individual sessions, face to face or online',
     details: 'Includes individual online sessions, individual face to face sessions, and small group sessions are available on request',
-    price: '£80/60m'
+    price: '£80/60m',
+    link: 'https://calendly.com/emma-sjacob/30min'
   }
 ];
 ---
@@ -42,7 +45,13 @@ const tiers = [
           </details>
         </div>
         <div class="fee-footer">
-          <span class="book-now">Book Now</span>
+          <a
+            class="book-now"
+            href={tier.link}
+            onclick={`window.open('${tier.link}', 'bookingWindow', 'width=900,height=750,resizable=yes,scrollbars=yes'); return false;`}
+          >
+            Book Now
+          </a>
           <span class="fee-price">{tier.price}</span>
         </div>
       </div>
