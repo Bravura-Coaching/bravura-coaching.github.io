@@ -13,6 +13,7 @@
 
 .carousel-track {
   display: flex;
+  width: max-content;
   animation: scroll-marquee 30s linear infinite;
   will-change: transform;
   
@@ -31,7 +32,7 @@
 }
 
 .carousel-item {
-  flex-shrink: 0;
+  flex: 0 0 800px;
   width: 800px;
   height: 600px;
   display: flex;
@@ -48,6 +49,7 @@
 
 @media (max-width: 1024px) {
   .carousel-item {
+    flex-basis: 600px;
     width: 600px;
     height: 500px;
   }
@@ -59,6 +61,7 @@
 
 @media (max-width: 768px) {
   .carousel-item {
+    flex-basis: 400px;
     width: 400px;
     height: 300px;
   }
