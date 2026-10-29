@@ -19,7 +19,7 @@ const carouselImages = Object.values(images).map(module => module.default);
         <div class="carousel-item" key={index}>
           <Image 
             src={image} 
-            alt={`Carousel image ${index + 1}`}
+            alt={`${index + 1}`}
             class="carousel-image"
           />
         </div>
@@ -29,7 +29,7 @@ const carouselImages = Object.values(images).map(module => module.default);
         <div class="carousel-item" key={`duplicate-${index}`}>
           <Image 
             src={image} 
-            alt={`Carousel image ${index + 1}`}
+            alt={`${index + 1}`}
             class="carousel-image"
           />
         </div>
