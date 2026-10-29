@@ -13,7 +13,7 @@
 
 .carousel-track {
   display: flex;
-  animation: scroll-marquee 60s linear infinite;
+  animation: scroll-marquee 30s linear infinite;
   will-change: transform;
   
   @keyframes scroll-marquee {

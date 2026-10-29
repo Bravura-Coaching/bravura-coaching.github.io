@@ -4,7 +4,7 @@ import '../styles/testimonials.scss';
 const testimonials = [
   {
     id: '1',
-    person: 'N J Jones',
+    person: 'N J Jones, Salisbury',
     description: 'Emma’s lessons are fun, sensitive to the needs and personalities of her students and produce great results. She is a warm and patient teacher who knows how to bring out the best in people and is a passionate advocate for music education. We feel very lucky to have found her.'
   },
   {
@@ -24,7 +24,7 @@ const testimonials = [
       <div class="testimonials-card">
         <div class="testimonials-content">
           <h3 class="testimonials-description">{testimonial.person}</h3>
-          <p class="testimonials-description">{testimonial.description}</p>
+          <p class="testimonials-description"><i>{testimonial.description}</i></p>
         </div>
       </div>
     ))}
