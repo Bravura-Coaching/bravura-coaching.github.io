@@ -14,11 +14,14 @@ import '../styles/footer.scss';
       </div>
     </div>
     <nav class="footer-nav">
-      <ul class="footer-links">
-        <li><a href="https://www.favershamstrings.co.uk/" target="_blank" rel="noopener noreferrer">Hire Instruments - Faversham Strings</a></li>
-        <li><a href="https://www.penguin.co.uk/books/452510/music-as-medicine-by-levitin-daniel/9781804940341" target="_blank" rel="noopener noreferrer">Daniel Levitin - Music as Medicine</a></li>
-        <li><a href="https://www.theguardian.com/books/2025/jan/14/music-as-medicine-by-daniel-levitin-review-musician-heal-thyself" target="_blank" rel="noopener noreferrer">Music as Medicine - The Guardian Review</a></li>
-      </ul>
+      <div class="footer-link-group">
+        <h3 class="footer-links-title">Useful Links</h3>
+        <ul class="footer-links">
+          <li><a href="https://www.favershamstrings.co.uk/" target="_blank" rel="noopener noreferrer">Hire Instruments - Faversham Strings</a></li>
+          <li><a href="https://www.penguin.co.uk/books/452510/music-as-medicine-by-levitin-daniel/9781804940341" target="_blank" rel="noopener noreferrer">Daniel Levitin - Music as Medicine</a></li>
+          <li><a href="https://www.theguardian.com/books/2025/jan/14/music-as-medicine-by-daniel-levitin-review-musician-heal-thyself" target="_blank" rel="noopener noreferrer">Music as Medicine - The Guardian Review</a></li>
+        </ul>
+      </div>
       <ul class="footer-links">
         <li><a href="#hero">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -34,7 +37,7 @@ import '../styles/footer.scss';
     document.querySelectorAll('.footer-links a').forEach(link => {
       link.addEventListener('click', (e) => {
         const href = link.getAttribute('href');
-        if (href.startsWith('#')) {
+        if (href?.startsWith('#')) {
           e.preventDefault();
           const target = document.querySelector(href);
           if (target) {

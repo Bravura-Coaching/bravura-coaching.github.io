@@ -66,6 +66,19 @@
   min-width: 0;
 }
 
+.footer-link-group {
+  min-width: 0;
+}
+
+.footer-links-title {
+  font-family: 'LibreBodoni', serif;
+  font-size: 1.25rem;
+  color: #C25268;
+  font-weight: 400;
+  margin: 0 0 1rem;
+  text-align: right;
+}
+
 .footer-links {
   list-style: none;
   padding: 0;
@@ -107,6 +120,10 @@
   }
 
   .footer-links {
+    text-align: left;
+  }
+
+  .footer-links-title {
     text-align: left;
   }
 

@@ -25,7 +25,7 @@
   }
 
   h1 {
-    font-size: clamp(3rem, 14vw, 19rem);
+    font-size: clamp(3rem, 12.6vw, 17rem);
     color: #C25268;
     margin-top: 0;
     margin-bottom: 0;
@@ -36,7 +36,7 @@
     overflow-wrap: break-word;
 
     @media (max-width: 768px) {
-      font-size: clamp(4rem, 10vw, 8rem);
+      font-size: clamp(4rem, 9vw, 7.2rem);
       margin-left: 1rem;
       margin-right: 1rem;
     }

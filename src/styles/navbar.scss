@@ -15,7 +15,7 @@
 
 .navbar-brand {
   font-size: clamp(1.15rem, 3vw, 1.25rem);
-  color: #C25268;
+  color: #F06A83;
   font-weight: 700;
   flex-shrink: 0;
 }
@@ -37,7 +37,7 @@
   span {
     width: 1.5rem;
     height: 0.25rem;
-    background-color: #C25268;
+    background-color: #F06A83;
     transition: all 0.3s ease;
     position: absolute;
     left: 0;
@@ -96,7 +96,7 @@
   }
 
   li a {
-    color: #C25268;
+    color: #F06A83;
     text-decoration: none;
     font-size: clamp(1rem, 2.5vw, 1.25rem);
     transition: opacity 0.3s ease;
