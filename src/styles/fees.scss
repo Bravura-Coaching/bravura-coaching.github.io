@@ -88,6 +88,16 @@
   color: #202020;
   line-height: 1.6;
   margin: 1rem 0 0 1.5rem;
+  padding: 0;
+  list-style: none;
+
+  li::before {
+    content: '•';
+    color: #C25268;
+    font-size: 1.8rem;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+  }
 }
 
 .fee-benefit {
@@ -95,7 +105,7 @@
   font-size: 0.95rem;
   color: #202020;
   line-height: 1.5;
-  margin: auto 0 0;
+  margin: 0;
   padding-top: 1rem;
 }
 

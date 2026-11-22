@@ -6,7 +6,10 @@ const tiers = [
     id: 'introductory',
     level: 'Introductory',
     description: 'Discovery Call & 30min Instrumental Session',
-    details: 'Includes a 20min Discovery Call ⁠and a 30min Online Instrumental Session to get you started',
+    details: [
+      'Includes a 20min Discovery Call',
+      'Includes a 30min Online Instrumental Session to get you started'
+    ],
     benefit: 'Get connected with how music helps you thrive',
     price: '£35',
     link: 'https://calendly.com/emma-sjacob/introductory-session'
@@ -15,7 +18,10 @@ const tiers = [
     id: 'intermediate',
     level: 'Beginner/Intermediate',
     description: 'Beginner/Intermediate package of 5 x 1hr sessions.',
-    details: 'Includes 4 x 60min Online Sessions and ⁠1 x 60min Face to Face Session',
+    details: [
+      'Includes 4 x 60min Online Sessions',
+      'Includes 1 x 60min Face to Face Session'
+    ],
     benefit: 'Start your musical journey to richer/better/stronger wellbeing and progress your playing skills',
     price: '£350',
     link: 'https://calendly.com/emma-sjacob/1-hour-lesson-one-to-one-in-person'
@@ -24,7 +30,11 @@ const tiers = [
     id: 'bespoke',
     level: 'Bespoke',
     description: 'Bespoke individual sessions, face to face or online',
-    details: 'Includes individual online sessions, individual face to face sessions, and small group sessions are available on request',
+    details: [
+      'Includes individual online sessions',
+      'Includes individual face to face sessions',
+      'Small group sessions are available on request'
+    ],
     benefit: 'Take your string playing and wellbeing to the next level with advanced tuition and deeper connection with your life goals.',
     price: '£80/1hr',
     link: 'https://calendly.com/emma-sjacob/30min'
@@ -44,7 +54,9 @@ const tiers = [
           <p class="fee-description">{tier.description}</p>
           <details class="fee-details">
             <summary>See more</summary>
-            <p class="fee-details-text">{tier.details}</p>
+            <ul class="fee-details-text">
+              {tier.details.map((detail) => <li>{detail}</li>)}
+            </ul>
           </details>
           <p class="fee-benefit">{tier.benefit}</p>
         </div>
